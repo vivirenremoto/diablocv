@@ -4,4 +4,4 @@
 
 [Autor](https://twitter.com/vivirenremoto)
 
-![Diablo CV - Miquel Camps Orteza](https://vivirenremoto.github.io/diablocv/social2.png)
+![Diablo CV - Miquel Camps Orteza](https://vivirenremoto.github.io/diablocv/static/social2.png)
