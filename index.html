@@ -8,19 +8,79 @@
     <link rel="stylesheet" href="TemplateData/style.css">
 
     
-    <meta property="og:image" content="https://vivirenremoto.github.io/diablocv/social.png">
+    <meta property="og:image" content="https://vivirenremoto.github.io/diablocv/static/social2.png">
     <meta property="og:image:secure_url"
-        content="https://vivirenremoto.github.io/diablocv/social.png">
+        content="https://vivirenremoto.github.io/diablocv/static/social2.png">
     <meta property="og:image:alt" content="Diablo CV - Miquel Camps Orteza">
     <meta property="og:image:type" content="image/png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Diablo CV - Miquel Camps Orteza">
-    <meta name="twitter:image" content="https://vivirenremoto.github.io/diablocv/social.png">
+    <meta name="twitter:image" content="https://vivirenremoto.github.io/diablocv/static/social2.png">
 
-    <link rel="prefetch" href="bg.jpg" />
+  
+    <link rel="prefetch" href="static/bg.jpg" />
+    <link rel="prefetch" href="static/diablo-ii-resurrected-cover.jpg" />
+    <link rel="prefetch" href="static/setup.jpg" />
+    <link rel="prefetch" href="static/llave.png" />
+    <link rel="prefetch" href="static/twitter.png" />
+    <link rel="prefetch" href="static/facebook.png" />
+    <link rel="prefetch" href="static/whatsapp.png" />
+    <link rel="prefetch" href="static/linkedin.png" />
+
+
+
+    <style>
+      body{background: black;}
+      #unity-footer{display:none;}
+      h2{margin-top:0;text-transform:uppercase;}
+      ul{padding-left: 15px;}
+      li{margin-bottom:10px;}
+      #modal{display:none;font-size:1.5em;font-family:arial;position:fixed;left:0;right:0;top:0;bottom:0;z-index:2;}
+      #modal_padding{color:white;padding:30px;}
+      #modal a{color:white;}
+      #btn_close{font-weight:bold;cursor:pointer;float:right;border-radius:100px;background:white;padding:10px 15px;color:black;}
+      #modal_box{ background:black url('static/bg.jpg');background-size: cover;}
+
+      #box_tesoro a.btn{display:block;padding:10px;background:white;color: black;margin: 0 25px 25px 0;float:left;}
+      .box{float:left;width:47%;}
+        
+      .clear{clear:both;}
+    
+    
+      @media screen and (max-width: 1200px) {
+          #modal_box{overflow-y:scroll;}
+    
+          #modal_box{height:100%;width:100%;position:fixed;left:0;right:0;}
+          .box{float:left;margin-bottom:30px;}
+
+          
+          #box_tesoro a.btn{width:40%;}
+
+          .hide_mobile{display:none;}
+      }
+      @media screen and (min-width: 1200px) {
+
+
+        #modal{font-size:1.5em;}
+        #modal_box{width:960px;height:600px;margin-top:-3px;border:1px white solid;}
+
+        #modal_center {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        #modal_padding{padding:80px;}
+      }
+      
+      </style>
 
   </head>
   <body>
+
+
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-N7DXTYBNEE"></script>
@@ -31,6 +91,7 @@
 
     gtag('config', 'G-N7DXTYBNEE');
   </script>
+
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
@@ -50,11 +111,11 @@
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/dia13.loader.js";
+      var loaderUrl = buildUrl + "/dia17.loader.js";
       var config = {
-        dataUrl: buildUrl + "/dia13.data",
-        frameworkUrl: buildUrl + "/dia13.framework.js",
-        codeUrl: buildUrl + "/dia13.wasm",
+        dataUrl: buildUrl + "/dia17.data",
+        frameworkUrl: buildUrl + "/dia17.framework.js",
+        codeUrl: buildUrl + "/dia17.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Diablo CV",
@@ -106,40 +167,10 @@
       };
       document.body.appendChild(script);
     </script>
+    
+    
 
 
-<style>
-  h1{margin-top:0;text-transform:uppercase;}
-  ul{padding-left: 15px;}
-  li{margin-bottom:10px;}
-  #modal{display:none;font-size:17px;font-family:arial;position:fixed;left:0;right:0;top:0;bottom:0;z-index:2;}
-  #modal_padding{color:white;padding:30px;}
-  #modal a{color:white;}
-  #btn_close{font-weight:bold;cursor:pointer;float:right;border-radius:100px;background:white;padding:10px 15px;color:black;}
-  #modal_box{ background:black url('bg.jpg');background-size: cover;}
-  
-
-  @media screen and (max-width: 1200px) {
-      #modal_box{overflow-y:scroll;}
-
-      #modal_box{height:100%;width:100%;position:fixed;left:0;right:0;}
-  }
-  @media screen and (min-width: 1200px) {
-    #modal{font-size:25px;}
-    #modal_box{width:960px;height:600px;margin-top:-42px;}
-
-    #modal_center {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #modal_padding{padding:80px;}
-  }
-  
-  </style>
   
   <div id="modal">
   <div id="modal_center">
@@ -153,51 +184,123 @@
   
   
       <div id="box_skills" class="content" style="display:none">
-          <h1>Skills</h1>
+          <h2>Skills</h2>
+          <div class="box">
           <ul>
-              <li>Web development (php-js)</li>
-              <li>Plugins WordPress</li>
-              <li>Chrome & Firefox extensions
+              <li>PHP</li>
+              <li>Unity3D</li>
+              <li>Javascript</li>
+              <li>Wordpress</li>
+          </ul>
+          </div>
+          <div class="box">
+          <ul>
+              <li>Chrome & Firefox extensions</li>
               <li>Web Scraping</li>
               <li>APIs</li>
-              <li>Git</li>
+              <li>GIT</li>
           </ul>
+          </div>
+          <br class="clear">
       </div>
   
       <div id="box_education" class="content" style="display:none">
-        <h1>Experience</h1>
+        <div class="box">
+        <h2>Experiencia</h2>
         <ul>
             <li>iSocialWeb - DEV</li>
             <li>El Corte Inglés - SEO</li>
             <li>Internet República - DEV</li>
             <li>Pranksarank - DEV</li>
-            <li><a href="https://www.linkedin.com/in/miquelcamps/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/miquelcamps/" target="_blank">Ver LinkedIn</a></li>
         </ul>
+        </div>
+        <div class="box">
+          <h2>Educación</h2>
+          <ul>
+              <li>Máster Search Marketing - Internet República</li>
+              <li>Máster SEO  - Webpositer Academy</li>
+              <li>FP Desarrollo de Apliaciones Informáticas - IES Montilivi</li>
+          </ul>
+        </div>
+        <br class="clear">
       </div>
   
       
       <div id="box_tools" class="content" style="display:none">
-          <h1>Tools</h1>
-          <ul>
-              <li>Visual Studio Code</li>
-              <li>Firefox</li>
-              <li>WinSCP</li>
+          <h2>Tools</h2>
+
+          <div class="box">
+            <ul>
+                <li>Visual Studio Code</li>
+                <li>Unity3D</li>
+                <li>Firefox</li>
+                <li>WinSCP</li>
+            </ul>
+            </div>
+            <div class="box">
+            <ul>
               <li>Termius</li>
               <li>Trello</li>
-          </ul>
+              <li>GitHub</li>
+              <li>Bitbucket</li>
+            </ul>
+            </div>
+          <br class="clear">
       </div>
   
           
-      <div id="box_setup" class="content">
-          <h1>Setup</h1>
-          <ul>
-              <li>Xiaomi Mi Notebook Pro</li>
-              <li>Philips 499P9H/00</li>
-              <li>Logitech MX Master 3</li>
-              <li>Logitech K760</li>
-              <li><a href="https://perfectsetup.pro/setups/setup-de-vivirenremoto-version-1-2/" target="_blank">Check all devices</a></li>
-          </ul>
+      <div id="box_setup" class="content" style="display:none">
+          <div class="box">
+            <h2>Setup</h2>
+            <a href="https://perfectsetup.pro/setups/setup-de-vivirenremoto-version-1-2/" target="_blank"><img src="static/setup.jpg" style="max-width:100%;border:1px white solid;" height="209"></a>
+            <ul>
+                <li>Xiaomi Mi Notebook Pro</li>
+                <li>Philips 499P9H/00</li>
+                <li>Logitech MX Master 3</li>
+                <li>Logitech K760</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h2>Nostalgia</h2>
+          <a href="https://bit.ly/play_diablo" target="_blank" style="display:block;">
+            <img src="static/diablo-ii-resurrected-cover.jpg" alt="Juego en oferta" style="max-width:100%;border:1px white solid;" height="209"><br>
+            Juego en oferta
+          </a>
+          </div>
+          <br class="clear">
       </div>
+
+      <div id="box_door" class="content" style="display:none">
+        <h2>Puerta cerrada</h2>
+        ¿Y si buscas una llave?<br><br>
+        Quizás esté escondida por aquí cerca.
+        
+      </div>
+          
+    <div id="box_llave" class="content" style="display:none">
+      <h2>Llave encontrada</h2>
+      Quizás te ayude a abrir alguna puerta.
+      <br><br>
+      <img src="static/llave.png" style="width: 120px;max-width: 100%;">
+  </div>
+          
+  <div id="box_tesoro" class="content" style="display: block;">
+    <h2>❤️ Gracias</h2>
+    Si te ha parecido original mi Curriculum te agradecería mucho si lo pudieras compartir en tus redes sociales para llegar a cuantas más personas y empresas mejor.
+    <br><br><br class="hide_mobile"><br class="hide_mobile">
+  
+  <a class="btn" href="https://twitter.com/intent/tweet?text=Echa%20un%20ojo%20a%20este%20CV%20de%20@vivirenremoto%20https://vivirenremoto.github.io/diablocv/"><img src="static/twitter.png" style="margin-right: 10px;width:40px;height:40px;" align="absmiddle">Twitter</a>
+  <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https://vivirenremoto.github.io/diablocv/&amp;quote=Echa%20un%20ojo%20a%20este%20CV%20de%20Miquel%20Camps"><img src="static/facebook.png" style="margin-right: 10px;width:40px;height:40px;" align="absmiddle">Facebook</a>
+  <a class="btn" href="whatsapp://send?text=Echa%20un%20ojo%20a%20este%20CV%20de%20Miquel%20Camps%20https://vivirenremoto.github.io/diablocv/"><img src="static/whatsapp.png" style="margin-right: 10px;width:40px;height:40px;" align="absmiddle">WhatsApp</a>
+  <a class="btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://vivirenremoto.github.io/diablocv/"><img src="static/linkedin.png" style="margin-right: 10px;width:40px;height:40px;" align="absmiddle">LinkedIn</a>
+    
+  <br class="clear"><br class="hide_mobile"><br class="hide_mobile">
+  
+  Sigueme en <a href="https://twitter.com/vivirenremoto" target="_blank">Twitter</a>, <a href="https://www.linkedin.com/in/miquelcamps/" target="_blank">LinkedIn</a>, echa un ojo a <a href="https://vivirenremoto.github.io/" target="_blank">mis proyectos</a> y si quieres que siga haciendo cosas molonas puedes 
+  
+  <a href="https://www.buymeacoffee.com/vivirenremoto" target="_blank">☕Invitame a un café</a>.
+</div>
   
   
   </div>
