@@ -103,12 +103,17 @@
       <div id="unity-mobile-warning">
         WebGL builds are not supported on mobile devices.
       </div>
+      <!--
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Diablo CV</div>
       </div>
+      -->
     </div>
+    
+    <div id="unity-fullscreen-button" style="cursor:pointer;z-index:999999;display:none;position:fixed;left:0;bottom:0;"></div>
+    
     <script>
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/dia20.loader.js";
@@ -158,6 +163,7 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
+          fullscreenButton.style.display = "block";
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
