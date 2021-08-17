@@ -106,13 +106,6 @@
       <div id="unity-mobile-warning">
         WebGL builds are not supported on mobile devices.
       </div>
-      <!--
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Diablo CV</div>
-      </div>
-      -->
     </div>
     
     <div id="unity-fullscreen-button" style="cursor:pointer;z-index:999999;display:none;position:fixed;left:0;bottom:0;"></div>
@@ -172,6 +165,7 @@
             //unityInstance.SetFullscreen(1);
             
           fullscreen.requestFullscreen();
+            fullscreenButton.style.display = "none";
 
             
             
